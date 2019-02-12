@@ -51,6 +51,21 @@ datatable(iris)
 
 
 ```
+#Now: interactive mapping
+```{r create datatable for leaflet}
+library(leaflet)
+Locations<- data.frame(
+  ID = c("Site 1","Site 2","Site 3"),
+  Latitude = c(57.16, 62.7,56.03),
+  Longitude = c(-154.22,-160.2,-152.56)
+)
+
+leaflet(Locations) %>% 
+  addTiles() %>% 
+  addMarkers(~ Longitude, ~ Latitude, popup = ~ ID)
+
+```
+
 
 
 
