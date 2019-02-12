@@ -28,3 +28,29 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r ggplot}
+#how to insert a chunk of R code: option+command+i
+
+library(ggplot2)
+library(dplyr)
+names(iris)
+
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color=Species)) +
+  geom_point()
+
+```
+
+
+#Next section: datatable
+
+```{r, echo = FALSE}
+library(DT)
+
+datatable(iris)
+
+
+```
+
+
+
